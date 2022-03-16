@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite" thread-count="5">
+	<!--  <test thread-count="5" parallel="tests" name="UI Test">
+		<classes>
+			<class name ="ui.tests.HomeTest.testDocumentationLinkOnHomePage"/>
+		</classes>
+	</test> -->
+		 <!--<groups>
+			    <run>
+			      <include name="unix"/>
+			    </run>
+			  </groups>
+		<test thread-count="5" parallel="tests" name="API Test">
+		</test> Test -->
+
+<test thread-count="5" parallel="methods" name="NotUI Test1">
+		<!-- <groups>
+		    <run>
+		      <include name="window"/>
+		    </run>
+		  </groups>-->
+
+		<classes>
+			<class name ="ui.tests.HomeTest_NotUI"/>
+		</classes>
+
+	</test>
+
+
+<test thread-count="5" parallel="tests" name="NotUI Test2">
+
+		<classes>
+			<class name ="ui.tests.LoginTest_NotUI"/>
+		</classes>
+
+	</test>
+</suite> <!-- Suite -->
